@@ -15,12 +15,44 @@ import matplotlib.pyplot as plt
 
 
 
-data = pd.read_excel("ESD.xlsx")
-print(data.head(10))
+# data = pd.read_excel("ESD.xlsx")
+# print(data.head(10))
 
 # sns.lineplot(data=data, x = "Business Unit", y= "Annual Salary",hue="Gender")                              # style="Ethnicity"
 
-sns.lineplot(data=data, x = "Department", y= "Bonus %",hue="Gender")
+# sns.lineplot(data=data, x = "Department", y= "Bonus %",hue="Gender")
 
-plt.legend(loc = 9)
+# plt.legend(loc = 9)
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+                                                # Bar plot 
+import matplotlib.pyplot as plt 
+import seaborn as sns 
+
+data = sns.load_dataset("tips")
+data2 = sns.load_dataset("titanic")
+
+# print(data2)      
+# colors = ["red","blue","orange","brown"]
+
+# sns.barplot(data = data, x="day",y="tip",color="orange",estimator="mean" , hue="sex", order= ["Sun","Sat","Fri","Thur"])
+# sns.barplot(data = data, x="sex",y="smoker",color="orange")
+
+
+
+sns.barplot(data = data, x="day",y="tip",color="orange",estimator="mean" , hue="sex", ) 
+
+print(data)
+plt.legend(loc = 9, ncols=2)
 plt.show()
+
