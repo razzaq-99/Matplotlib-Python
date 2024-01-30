@@ -36,11 +36,11 @@ import matplotlib.pyplot as plt
 
 
                                                 # Bar plot 
-import matplotlib.pyplot as plt 
-import seaborn as sns 
+# import matplotlib.pyplot as plt 
+# import seaborn as sns 
 
-data = sns.load_dataset("tips")
-data2 = sns.load_dataset("titanic")
+# data = sns.load_dataset("tips")
+# data2 = sns.load_dataset("titanic")
 
 # print(data2)      
 # colors = ["red","blue","orange","brown"]
@@ -50,9 +50,46 @@ data2 = sns.load_dataset("titanic")
 
 
 
-sns.barplot(data = data, x="day",y="tip",color="orange",estimator="mean" , hue="sex", ) 
+# sns.barplot(data = data, x="day",y="tip",color="orange",estimator="mean" , hue="sex", ) 
 
-print(data)
-plt.legend(loc = 9, ncols=2)
+# print(data)
+# plt.legend(loc = 9, ncols=2)
+# plt.show()
+
+
+
+
+
+
+
+                                                # Histogram
+import seaborn as sns     
+import matplotlib.pyplot as plt 
+
+# data = sns.load_dataset("tips")
+
+# sns.histplot(data=data, x="size",hue="time",kde=True)
+
+# sns.histplot(data=data, x="day",y="tip",hue="time")
+
+# sns.histplot(data=data, x="day",y="total_bill")
+ 
+# print(data.head(10))
+# data["day"] = data['day'].astype(str)
+# df = data['day'].count()
+# print(df)
+# plt.show()
+
+
+
+
+
+data = sns.load_dataset("titanic")
+
+
+# sns.histplot(data = data , x="sex",y="age", kde=True ,hue="who", discrete=True ,bins=10)
+
+sns.histplot(data = data , x="age",y="survived", kde=True , discrete=True ,bins=10) 
+# plt.legend(ncols=3)
+print(data.head(10))
 plt.show()
-
