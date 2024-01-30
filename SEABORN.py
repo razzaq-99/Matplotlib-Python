@@ -63,8 +63,8 @@ import matplotlib.pyplot as plt
 
 
                                                 # Histogram
-import seaborn as sns     
-import matplotlib.pyplot as plt 
+# import seaborn as sns     
+# import matplotlib.pyplot as plt 
 
 # data = sns.load_dataset("tips")
 
@@ -84,12 +84,55 @@ import matplotlib.pyplot as plt
 
 
 
-data = sns.load_dataset("titanic")
+# data = sns.load_dataset("titanic")
 
 
 # sns.histplot(data = data , x="sex",y="age", kde=True ,hue="who", discrete=True ,bins=10)
 
-sns.histplot(data = data , x="age",y="survived", kde=True , discrete=True ,bins=10) 
-# plt.legend(ncols=3)
+# sns.histplot(data = data , x="age", kde=True , discrete=True ,bins=10,hue="who") 
+# plt.title("Age of peoples in Titanic")
+# # plt.legend(ncols=3)
+# print(data.head(10))
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                  # Scatter Plot
+import seaborn as sns          
+import matplotlib.pyplot as plt 
+import pandas as pd 
+
+
+# data = sns.load_dataset("tips")
+
+# sns.scatterplot(data= data, x="total_bill",y="tip",hue="sex")
+# print(data)
+
+# sns.scatterplot(data= data, x="total_bill",y="tip",hue="day",size="smoker")
+# print(data)
+# plt.legend(ncols=2)
+# plt.title("Total bills vs tips")
+# plt.show()
+
+
+
+
+
+data = pd.read_excel("ESD.xlsx")
+
 print(data.head(10))
+
+sns.scatterplot(data= data , x="Age",y="Annual Salary",hue="Department",size="Gender")
+
+plt.legend(bbox_to_anchor = (0.2,0,1.1,1.1))
+
 plt.show()
