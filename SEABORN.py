@@ -220,13 +220,13 @@ import matplotlib.pyplot as plt
 
                                                                      # VIOLIN PLOT 
                                                                      
-import seaborn as sns          
-import matplotlib.pyplot as plt 
+# import seaborn as sns          
+# import matplotlib.pyplot as plt 
 
 
-data = sns.load_dataset("tips")
+# data = sns.load_dataset("tips")
 
-print(data.head(10))
+# print(data.head(10))
 
 # sns.violinplot(data = data, x = "total_bill",hue="day")
 # sns.violinplot(data = data, x = "total_bill",hue="sex")
@@ -234,6 +234,30 @@ print(data.head(10))
 # sns.violinplot(data = data , x="tip",hue="sex",color="orange")
 
 
-sns.violinplot(data = data , x="smoker",hue="sex",color="orange")
+# sns.violinplot(data = data , x="smoker",hue="sex",color="orange")
 
-plt.show()      
+# plt.show()      
+
+
+
+
+
+
+
+
+
+                                                                      # PAIR PLOT
+import seaborn as sns          
+import matplotlib.pyplot as plt 
+
+# data = sns.load_dataset("tips")
+data = sns.load_dataset("iris")
+
+
+# sns.pairplot(data= data,hue="sex",diag_kind="")
+
+sns.pairplot(data= data,hue="species")
+print(data.head(10))
+plt.savefig("iris_analysis.png")
+plt.show()
+
