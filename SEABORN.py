@@ -107,9 +107,9 @@ import matplotlib.pyplot as plt
 
 
                                                                   # Scatter Plot
-import seaborn as sns          
-import matplotlib.pyplot as plt 
-import pandas as pd 
+# import seaborn as sns          
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
 
 
 # data = sns.load_dataset("tips")
@@ -119,7 +119,7 @@ import pandas as pd
 
 # sns.scatterplot(data= data, x="total_bill",y="tip",hue="day",size="smoker")
 # print(data)
-# plt.legend(ncols=2)
+# # plt.legend(ncols=2)
 # plt.title("Total bills vs tips")
 # plt.show()
 
@@ -127,12 +127,53 @@ import pandas as pd
 
 
 
+# data = pd.read_excel("ESD.xlsx")
+
+# print(data.head(10))
+
+# sns.scatterplot(data= data , x="Age",y="Annual Salary",hue="Department",size="Gender")
+
+# plt.legend(bbox_to_anchor = (0.2,0,1.1,1.1))
+
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+                                                        #   HEATMAP PLOT
+import seaborn as sns          
+import matplotlib.pyplot as plt 
+import pandas as pd 
+
+
+# data = sns.load_dataset("tips")
+
+# gp = data.groupby("day").agg({"tip":"mean"})
+
+# sns.heatmap(gp)
+# sns.heatmap(gp,xticklabels='auto',center=2.2)
+
+# plt.show()
+                                                        
+                                                        
+                                                        
+                                                        
+                                            
+                                            
 data = pd.read_excel("ESD.xlsx")
 
+dfx = data.groupby("Department").agg({"Annual Salary":"mean"})  
+
+sns.heatmap(dfx)
+
+# sns.heatmap(dfx,center=1.5)
+# plt.legend()
 print(data.head(10))
-
-sns.scatterplot(data= data , x="Age",y="Annual Salary",hue="Department",size="Gender")
-
-plt.legend(bbox_to_anchor = (0.2,0,1.1,1.1))
-
 plt.show()
