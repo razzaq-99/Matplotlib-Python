@@ -188,9 +188,9 @@ import matplotlib.pyplot as plt
 
 
                                                                         # Count PLot 
-import seaborn as sns          
-import matplotlib.pyplot as plt 
-import pandas as pd 
+# import seaborn as sns          
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
 
 # data = sns.load_dataset("tips")
 
@@ -204,10 +204,36 @@ import pandas as pd
   
   
   
-df = pd.read_excel("ESD.xlsx")
+# df = pd.read_excel("ESD.xlsx")
 
-print(df.head(10))
+# print(df.head(10))
 
-sns.countplot(data= df , x = "Department",hue="Gender",palette="viridis")
+# sns.countplot(data= df , x = "Department",hue="Gender",palette="viridis")
 
-plt.show()
+# plt.show()
+
+
+
+
+
+
+
+                                                                     # VIOLIN PLOT 
+                                                                     
+import seaborn as sns          
+import matplotlib.pyplot as plt 
+
+
+data = sns.load_dataset("tips")
+
+print(data.head(10))
+
+# sns.violinplot(data = data, x = "total_bill",hue="day")
+# sns.violinplot(data = data, x = "total_bill",hue="sex")
+ 
+# sns.violinplot(data = data , x="tip",hue="sex",color="orange")
+
+
+sns.violinplot(data = data , x="smoker",hue="sex",color="orange")
+
+plt.show()      
