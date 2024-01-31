@@ -148,9 +148,9 @@ import matplotlib.pyplot as plt
 
 
                                                         #   HEATMAP PLOT
-import seaborn as sns          
-import matplotlib.pyplot as plt 
-import pandas as pd 
+# import seaborn as sns          
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
 
 
 # data = sns.load_dataset("tips")
@@ -167,13 +167,47 @@ import pandas as pd
                                                         
                                             
                                             
-data = pd.read_excel("ESD.xlsx")
+# data = pd.read_excel("ESD.xlsx")
 
-dfx = data.groupby("Department").agg({"Annual Salary":"mean"})  
+# dfx = data.groupby("Department").agg({"Annual Salary":"mean"})  
 
-sns.heatmap(dfx)
+# sns.heatmap(dfx)
 
 # sns.heatmap(dfx,center=1.5)
 # plt.legend()
-print(data.head(10))
+# print(data.head(10))
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+                                                                        # Count PLot 
+import seaborn as sns          
+import matplotlib.pyplot as plt 
+import pandas as pd 
+
+# data = sns.load_dataset("tips")
+
+# sns.countplot(data= data, x="sex",hue="sex")
+
+# sns.countplot(data= data, x="day",hue="sex")
+
+# plt.show()
+  
+  
+  
+  
+  
+df = pd.read_excel("ESD.xlsx")
+
+print(df.head(10))
+
+sns.countplot(data= df , x = "Department",hue="Gender",palette="viridis")
+
 plt.show()
