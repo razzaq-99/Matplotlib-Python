@@ -247,17 +247,37 @@ import matplotlib.pyplot as plt
 
 
                                                                       # PAIR PLOT
-import seaborn as sns          
-import matplotlib.pyplot as plt 
+# import seaborn as sns          
+# import matplotlib.pyplot as plt 
 
 # data = sns.load_dataset("tips")
-data = sns.load_dataset("iris")
+# data = sns.load_dataset("iris")
 
 
 # sns.pairplot(data= data,hue="sex",diag_kind="")
 
-sns.pairplot(data= data,hue="species")
-print(data.head(10))
-plt.savefig("iris_analysis.png")
-plt.show()
+# sns.pairplot(data= data,hue="species")
+# print(data.head(10))
+# plt.savefig("iris_analysis.png")
+# plt.show()
 
+
+
+
+
+
+                                                             # STRIP PLOT                                            
+                                                             
+import seaborn as sns 
+import matplotlib.pyplot as plt
+
+data = sns.load_dataset("tips")
+
+sns.stripplot(data= data, x = "day", y = "total_bill",hue="sex",dodge=True, jitter= 0.3 , marker = 'D',alpha = 1)
+
+# sns.scatterplot(data= data, x = "day", y = "total_bill",hue="sex")
+
+plt.legend()
+print(data.head(10))
+plt.show()
+                                                     
