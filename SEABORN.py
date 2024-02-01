@@ -380,12 +380,12 @@ import matplotlib.pyplot as plt
                            
                            
                                                               # Multiple Plots in Seaborn
-import seaborn as sns 
-import matplotlib.pyplot as plt 
-import pandas as pd  
+# import seaborn as sns 
+# import matplotlib.pyplot as plt 
+# import pandas as pd  
 
-data = sns.load_dataset("tips")
-df = pd.read_excel("ESD.xlsx")
+# data = sns.load_dataset("tips")
+# df = pd.read_excel("ESD.xlsx")
 
 
 
@@ -394,13 +394,34 @@ df = pd.read_excel("ESD.xlsx")
 
 # sns.FacetGrid(data=data , col="day")
 # x = sns.FacetGrid(data = data, col= "smoker",hue="sex")
-x = sns.FacetGrid(data = data, col= "day",hue="sex",height=2)
+# x = sns.FacetGrid(data = data, col= "day",hue="sex",height=2)
 
-x.map(sns.barplot,"sex","tip")
+# x.map(sns.barplot,"sex","tip")
 
 # sns.FacetGrid(data = df, col="Department")
 # dfx = sns.FacetGrid(data = df, col="Country",height=2)
 
 # dfx.map(sns.barplot,"Bonus %","Job Title")
+
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+
+ # Relational Plot in seaborn 
+ 
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+
+data = sns.load_dataset("tips")
+
+sns.relplot(data = data , x= "tip", y = "total_bill",hue="sex",kind="scatter",col="day",height=3,size="smoker")
 
 plt.show()
