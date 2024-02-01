@@ -341,9 +341,9 @@ import matplotlib.pyplot as plt
 
                                                             # Style and Color in Plots
 
-import seaborn as sns 
-import matplotlib.pyplot as plt 
-import pandas as pd  
+# import seaborn as sns 
+# import matplotlib.pyplot as plt 
+# import pandas as pd  
 
 
 # data = sns.load_dataset("exercise")
@@ -367,8 +367,40 @@ import pandas as pd
 # sns.palplot(sns.color_palette("colorblind"))
 # sns.palplot(sns.color_palette("colorblind6"))
 # sns.palplot(sns.color_palette("muted"))
-sns.palplot(sns.color_palette("pastel",4))
-sns.palplot(sns.color_palette("spring",5))
-sns.palplot(sns.color_palette("viridis",6))
+# sns.palplot(sns.color_palette("pastel",4))
+# sns.palplot(sns.color_palette("spring",5))
+# sns.palplot(sns.color_palette("viridis",6))
+
+# plt.show()
+
+
+
+
+                           
+                           
+                           
+                                                              # Multiple Plots in Seaborn
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+import pandas as pd  
+
+data = sns.load_dataset("tips")
+df = pd.read_excel("ESD.xlsx")
+
+
+
+# print(data)
+# print(df.head(10))
+
+# sns.FacetGrid(data=data , col="day")
+# x = sns.FacetGrid(data = data, col= "smoker",hue="sex")
+x = sns.FacetGrid(data = data, col= "day",hue="sex",height=2)
+
+x.map(sns.barplot,"sex","tip")
+
+# sns.FacetGrid(data = df, col="Department")
+# dfx = sns.FacetGrid(data = df, col="Country",height=2)
+
+# dfx.map(sns.barplot,"Bonus %","Job Title")
 
 plt.show()
