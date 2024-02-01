@@ -268,16 +268,107 @@ import matplotlib.pyplot as plt
 
                                                              # STRIP PLOT                                            
                                                              
-import seaborn as sns 
-import matplotlib.pyplot as plt
+# import seaborn as sns 
+# import matplotlib.pyplot as plt
 
-data = sns.load_dataset("tips")
+# data = sns.load_dataset("tips")
 
-sns.stripplot(data= data, x = "day", y = "total_bill",hue="sex",dodge=True, jitter= 0.3 , marker = 'D',alpha = 1)
+# sns.stripplot(data= data, x = "day", y = "total_bill",hue="sex",dodge=True, jitter= 0.3 , marker = 'D',alpha = 1)
 
 # sns.scatterplot(data= data, x = "day", y = "total_bill",hue="sex")
 
-plt.legend()
-print(data.head(10))
+# plt.legend()
+# print(data.head(10))
+# plt.show()
+
+
+
+
+
+
+
+
+
+                                                            #    BOX PLOT 
+# import seaborn as sns 
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
+
+
+# data = sns.load_dataset("tips")
+# df = pd.read_excel("ESD.xlsx")
+
+# print(df)
+
+
+# sns.boxplot(data = data, x = 'day', y="tip" , hue = "sex",dodge=True,fliersize=8)
+
+# sns.boxplot(data = df, x = "Department",y = "Bonus %",hue="Gender")
+
+# plt.legend(loc = 9, ncols = 2)
+# plt.show()
+
+
+
+
+
+
+                                                            # Categorical Plot 
+                                                            
+# import seaborn as sns 
+# import matplotlib.pyplot as plt 
+# import pandas as pd 
+
+# data = sns.load_dataset("tips")
+# data = sns.load_dataset("iris")
+# print(data)
+
+# sns.catplot(data = data, x = "day",y = "tip",hue = "sex",kind="strip",jitter=0.2,dodge=True)
+
+# sns.catplot(data = data,kind="bar")
+# sns.catplot(data = data,kind="swarm")
+# sns.catplot(data = data,kind="violin")
+# sns.catplot(data = data,kind="boxen")
+
+# plt.show()
+
+
+
+
+
+
+
+
+                                                            # Style and Color in Plots
+
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+import pandas as pd  
+
+
+# data = sns.load_dataset("exercise")
+
+# print(data.head(10))    
+
+# sns.set_style(style="dark")
+# sns.set_style(style="darkgrid")
+# sns.set_style(style="ticks")
+# sns.set_style(style="white")
+# sns.set_style(style="whitegrid")
+
+# sns.barplot(data=data, x="time",y="pulse",hue="diet")
+
+# plt.show()
+
+# sns.palplot(sns.color_palette())
+# sns.palplot(sns.color_palette("viridis"))
+# sns.palplot(sns.color_palette("bright"))
+# sns.palplot(sns.color_palette("bright6"))
+# sns.palplot(sns.color_palette("colorblind"))
+# sns.palplot(sns.color_palette("colorblind6"))
+# sns.palplot(sns.color_palette("muted"))
+sns.palplot(sns.color_palette("pastel",4))
+sns.palplot(sns.color_palette("spring",5))
+sns.palplot(sns.color_palette("viridis",6))
+
 plt.show()
-                                                     
