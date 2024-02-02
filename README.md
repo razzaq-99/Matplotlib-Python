@@ -31,4 +31,8 @@ This Repository contains the code of following topics:
 - Relational Plots
 
 
+## Some images of plotted data.
+<img src = "https://github.com/razzaq-99/Matplotlib-and-Seaborn/blob/master/figure.png" >
+<img src = "https://github.com/razzaq-99/Matplotlib-and-Seaborn/blob/master/iris_analysis.png">
+
 
