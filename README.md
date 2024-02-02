@@ -33,6 +33,6 @@ This Repository contains the code of following topics:
 
 ## Some images of plotted data.
 <img src = "https://github.com/razzaq-99/Matplotlib-and-Seaborn/blob/master/figure.png" >
-<img src = "https://github.com/razzaq-99/Matplotlib-and-Seaborn/blob/master/iris_analysis.png" width="300">
+<img src = "https://github.com/razzaq-99/Matplotlib-and-Seaborn/blob/master/iris_analysis.png" width="550">
 
 
